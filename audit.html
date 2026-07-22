@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Full audit, Lulubug's Garden</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jacogilliam-ai.github.io/lulubug-read/audit.html" />
+  <meta property="og:title" content="Full audit, Lulubug's Garden" />
+  <meta property="og:description" content="What jumped out across every page. Prepared for the Lulubug's Garden team." />
+  <meta property="og:image" content="https://jacogilliam-ai.github.io/lulubug-read/images/lulubug-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+
+  <main id="site" class="site">
+
+    <!-- NAV -->
+    <nav class="nav">
+      <img src="images/lulubug-logo.png" alt="Lulubug's Garden" class="nav-logo" onerror="this.style.display='none'" />
+      <div class="nav-links">
+        <a href="index.html">← Back to the main page</a>
+      </div>
+    </nav>
+
+    <!-- HERO (compressed) -->
+    <section class="section section-forest" style="padding-top: 120px;">
+      <div class="container container-narrow center-head">
+        <p class="eyebrow eyebrow-light">Full audit</p>
+        <h1 class="display-1 display-light">What jumped out across every page.</h1>
+        <p class="body-lg body-light">Thirty-five findings across seven categories. Ranked by launch-timed impact. Snapshot in time as of the audit date.</p>
+      </div>
+    </section>
+
+    <!-- 1. CRITICAL -->
+    <section class="section section-cream">
+      <div class="container center-head">
+        <p class="eyebrow">01 / Critical</p>
+        <h2 class="display-1">Things shipped visibly broken.</h2>
+        <p class="lead">Six items. High visibility, high urgency, all fixable inside the Wix editor.</p>
+      </div>
+      <div class="audit-list">
+        <article class="audit-item">
+          <p class="audit-num">01</p>
+          <div class="audit-body">
+            <h3>Terms, Privacy, and Cookies footer links all 404.</h3>
+            <p>Every page footer displays "Terms and Conditions | Privacy Policy | Cookies Policy" as clickable text, but the href points to <code>/contact</code>. Direct URLs (<code>/privacy-policy</code>, <code>/terms-and-conditions</code>, <code>/cookie-policy</code>) return HTTP 404. For a site running Meta ads and capturing PII (email, first name), this is a Meta ad policy risk plus CCPA and CPRA compliance exposure. Same-day fix.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">02</p>
+          <div class="audit-body">
+            <h3>Orphan product page live at /product-page/printable-packet-episode-1.</h3>
+            <p>Returns HTTP 200, is included in the Wix product sitemap, has empty Regular Price and Sale Price fields, and shows a working "Add to Cart" button. Left over from Wix Stores app installation. The site claims no store exists, but Google can see one. Same-day fix (unpublish).</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">03</p>
+          <div class="audit-body">
+            <h3>Home hero contradicts itself.</h3>
+            <p>"Coming soon to your screens!" sits directly above "Watch now on YouTube!" for a show with live episodes. Undermines the launch narrative and confuses every parent landing there from a Meta ad. Same-day copy fix.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">04</p>
+          <div class="audit-body">
+            <h3>About-page bios truncated mid-sentence.</h3>
+            <p>Jil's bio starts at "she realized that..." with the opening missing. Dr. Karen Manotas's bio cuts at "Department of Pediat..." Sterling's character bio (on the Videos page) cuts at "Sterling's steady". Wix text-box overflow bug. Same-day fix by resizing containers.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">05</p>
+          <div class="audit-body">
+            <h3>Brigham Taylor filmography is mangled.</h3>
+            <p>Film titles render as bare ALL-CAPS strings with orphan connecting words ("with director Jon Favreau,", "franchise,"). TOKYO COWBOY and WHISKEY THROTTLE (his recent independent films) are unlabeled and mixed in with Disney tentpoles. His name is the site's strongest legitimacy signal, and this section reads amateur. One-day copy rewrite.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">06</p>
+          <div class="audit-body">
+            <h3>Dead Wix apps installed with zero surface.</h3>
+            <p>Wix Members Area, Wix Events and Tickets, Wix Stores, and ShoutOut Legacy are all enabled on the site with no user-facing surface. ShoutOut is Wix's deprecated email tool. If the Join form is silently wired to it, every subscriber vanishes into a legacy database Wix no longer supports. One-day cleanup.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2. MISSING INFRASTRUCTURE -->
+    <section class="section section-cream-2">
+      <div class="container center-head">
+        <p class="eyebrow">02 / Missing infrastructure</p>
+        <h2 class="display-1">Nothing captures. Nothing measures.</h2>
+        <p class="lead">Five items. Every ad dollar and every signup runs blind until these ship.</p>
+      </div>
+      <div class="audit-list">
+        <article class="audit-item">
+          <p class="audit-num">01</p>
+          <div class="audit-body">
+            <h3>No Meta Pixel base tag anywhere in the HTML.</h3>
+            <p>Running six live Meta ads with no Pixel installed means no conversion tracking, no lookalike audiences, no ability to retarget parents who visited the site but didn't sign up. Every ad decision from here on is guesswork. Free to fix. Costs nothing to install.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">02</p>
+          <div class="audit-body">
+            <h3>Google Tag Manager container loaded, but no verifiable GA4 events.</h3>
+            <p>GTM container <code>GTM-P2BL8D44</code> is loaded on every page, but the container's contents aren't verifiable server-side. Without confirmed GA4 events, there's no way to see how many people are landing on the site, how many are signing up, or where they're bouncing. Half-day fix to verify the GA4 setup and add missing events.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">03</p>
+          <div class="audit-body">
+            <h3>No connected email service provider.</h3>
+            <p>No Klaviyo, Mailchimp, ConvertKit, Beehiiv, or Wix Ascend markers detected anywhere in the site's code. Every "Subscribe Now" and "Join the Club" submission is landing in the default Wix Form pipeline, which delivers email notifications to whoever set up the site. Explains the "signup doesn't fire" report perfectly. Two to three days to wire an ESP and draft the welcome automation.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">04</p>
+          <div class="audit-body">
+            <h3>No TikTok pixel, no Pinterest tag, no YouTube subscribe SDK.</h3>
+            <p>Beyond the Meta gap, none of the other social platform tracking is installed. If Lulubug's Garden ever runs TikTok ads or Pinterest ads or wants a YouTube subscribe embed, all of those will need their own setup. All optional now, all easy to add once the ESP and Meta Pixel are in.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">05</p>
+          <div class="audit-body">
+            <h3>JSON-LD structured data is one line.</h3>
+            <p>Sitewide schema is a bare <code>WebSite</code> entry. Missing: <code>Organization</code> for Lulubug Enterprises LLC, <code>Person</code> entries for Jil Hunter and Brigham Taylor and Dr. Karen Manotas, <code>VideoObject</code> per episode, and a <code>PodcastSeries</code> if the parent-facing segment is ever spun off. Without this, Google and AI answer engines have no anchor for "who is Lulubug" queries.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. CONTENT GAPS -->
+    <section class="section section-cream">
+      <div class="container center-head">
+        <p class="eyebrow">03 / Content gaps</p>
+        <h2 class="display-1">Pages that should exist but don't.</h2>
+        <p class="lead">Six items. Every one is a missed SEO landing and a missed conversion opportunity.</p>
+      </div>
+      <div class="audit-list">
+        <article class="audit-item">
+          <p class="audit-num">01</p>
+          <div class="audit-body">
+            <h3>No per-character detail pages.</h3>
+            <p>Lulubug, Curby, Sterling, Willow, and Daisy each get a homepage card but no dedicated URL. That's five missed SEO landing pages for character-name searches ("who is Lulubug," "Curby caterpillar"), and five missed pages where a parent could dig deeper before signing up.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">02</p>
+          <div class="audit-body">
+            <h3>No podcast or parent-segment page.</h3>
+            <p>The parent-facing segment at the end of each YouTube episode has no dedicated landing page. That's a missed opportunity to package Dr. Karen Manotas's clinical guidance as a separately-discoverable content strand.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">03</p>
+          <div class="audit-body">
+            <h3>No proper videos hub.</h3>
+            <p>The URL <code>/videos</code> is actually the character intro page, not a videos gallery. The nav labels it "Meet Garden Friends" while the URL slug is <code>/videos</code>. Users and Google both get confused.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">04</p>
+          <div class="audit-body">
+            <h3>No press or media page.</h3>
+            <p>Brigham Taylor's Disney background and Dr. Karen Manotas's University of Utah credentials are the two strongest press hooks Lulubug has. Right now they're buried on the About page. A proper Press page (photos, quotes, high-res logos, contact for interviews) unlocks earned media coverage.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">05</p>
+          <div class="audit-body">
+            <h3>No blog or parent resources.</h3>
+            <p>No content ranks for "help kids name emotions," "social emotional learning ages 3 to 7," or any of the hundreds of parenting-education queries Lulubug is uniquely positioned to answer. Ten well-written parent-education posts would build a compounding SEO moat over six to twelve months.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">06</p>
+          <div class="audit-body">
+            <h3>No FAQ, no For Educators, no newsletter archive.</h3>
+            <p>Standard trust pages for a kids-education brand are all missing. A For Educators page especially would open the door to school and preschool licensing conversations, which is exactly where kids brands at this stage grow next.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. METADATA + SEO -->
+    <section class="section section-cream-2">
+      <div class="container center-head">
+        <p class="eyebrow">04 / Metadata and SEO</p>
+        <h2 class="display-1">The technical foundation isn't set up.</h2>
+        <p class="lead">Five items. Invisible to visitors, decisive for Google and shared-link previews.</p>
+      </div>
+      <div class="audit-list">
+        <article class="audit-item">
+          <p class="audit-num">01</p>
+          <div class="audit-body">
+            <h3>Every page missing meta description, og:description, og:image, twitter:description, twitter:image.</h3>
+            <p>When anyone shares a Lulubug's Garden URL on iMessage, WhatsApp, Slack, LinkedIn, Instagram Stories, or in a Meta ad, the link preview renders text-only. No image. No description. Just the URL. For a brand with strong physical character design, this is a huge missed impression on every single share.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">02</p>
+          <div class="audit-body">
+            <h3>twitter:card set to summary_large_image with no image.</h3>
+            <p>A card promise with no payload. The tag tells X/Twitter to expect a large preview image; the tag doesn't provide one. Renders as a broken preview.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">03</p>
+          <div class="audit-body">
+            <h3>Page titles are formulaic and keyword-free.</h3>
+            <p>Every page title reads as "[Page] | Lulubug". Missing keywords parents actually search: "kids emotional learning show," "social emotional cartoon," "kids mental health tools." Google-friendly titles need to describe what the page is, not just name it.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">04</p>
+          <div class="audit-body">
+            <h3>Sitemap advertises empty store-products and store-categories entries.</h3>
+            <p>The Wix-generated sitemap includes <code>store-products-sitemap.xml</code> and <code>store-categories-sitemap.xml</code>, both empty. Google reads this as "store with no products," a weak signal for a brand not trying to sell anything yet. Cleanup: disable the Wix Stores app entirely.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">05</p>
+          <div class="audit-body">
+            <h3>Favicon is default Wix pfavico.ico.</h3>
+            <p>Every browser tab, every bookmark, every search result loses the brand mark. Fifteen minutes to build a proper favicon set (16, 32, 180, 192, 512) using the Lulubug logo and upload to Wix.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. CAPTURE CONSISTENCY -->
+    <section class="section section-cream">
+      <div class="container center-head">
+        <p class="eyebrow">05 / Signup labels and capture</p>
+        <h2 class="display-1">Five names for the same signup.</h2>
+        <p class="lead">Five items. Same button labeled five different ways across the site.</p>
+      </div>
+      <div class="audit-list">
+        <article class="audit-item">
+          <p class="audit-num">01</p>
+          <div class="audit-body">
+            <h3>"Subscribe Now!" (Home hero).</h3>
+            <p>The homepage "Join the Garden!" section calls the signup "Subscribe Now!" Clear enough but inconsistent with every other version of the same action.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">02</p>
+          <div class="audit-body">
+            <h3>"Join the Club!" (Meet the Garden Friends).</h3>
+            <p>The character page calls the same signup "Join the Club!" and pitches it as access to Lulubug's Feelings Flower community. Different label, different framing, same underlying form.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">03</p>
+          <div class="audit-body">
+            <h3>"Join Now!" (Join Now page CTA).</h3>
+            <p>The dedicated Join page calls the same signup "Join Now!" as the CTA text on the button. Third label.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">04</p>
+          <div class="audit-body">
+            <h3>"Subscribe for updates and to join the adventure!" (Join page body).</h3>
+            <p>Right above the same signup form on the Join page. Fourth label, fourth framing, same form.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">05</p>
+          <div class="audit-body">
+            <h3>"bug-mail" (marketing copy + Contact form).</h3>
+            <p>The brand's own name for the newsletter is "bug-mail" (the best one). But the Contact form is ALSO called "bug-mail," which will confuse parents about whether they're subscribing or asking a question. Pick one label, unify sitewide.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. CONTENT QUALITY -->
+    <section class="section section-cream-2">
+      <div class="container center-head">
+        <p class="eyebrow">06 / Content quality</p>
+        <h2 class="display-1">Small copy and typography issues.</h2>
+        <p class="lead">Four items. Details that pile up.</p>
+      </div>
+      <div class="audit-list">
+        <article class="audit-item">
+          <p class="audit-num">01</p>
+          <div class="audit-body">
+            <h3>Typography inconsistent across pages.</h3>
+            <p>The About page uses double-hyphens (<code>--</code>) as em-dash substitutes. The Videos page uses proper em dashes. Wix's editor allows both; readers notice both. Standardize on real punctuation.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">02</p>
+          <div class="audit-body">
+            <h3>Wix accessibility skip-nav strings render as visible text.</h3>
+            <p>"top of page" and "bottom of page" appear as visible page copy on multiple pages. These are Wix's built-in skip-nav a11y helpers, and they should never be visible. Wix Editor setting fix.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">03</p>
+          <div class="audit-body">
+            <h3>Image alts are default camera filenames.</h3>
+            <p>Homepage image alts include <code>DSC_4864.jpg</code>, <code>Dianas_visuals_4988-Edit.jpg</code>, <code>Screenshot 2026-03-16 at 3.55.54 PM.png</code>, and <code>FM00074431_edited_edited.jpg</code>. Zero SEO signal. Zero accessibility value. Google Image Search cannot rank any of them properly.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">04</p>
+          <div class="audit-body">
+            <h3>Hero video file has a double extension.</h3>
+            <p>The homepage hero video file is named <code>Lulubug Theme Song. Compressedmp4.mp4</code>. Cosmetic, but reads as a rushed export uploaded without cleanup.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. SMALL BUT REAL -->
+    <section class="section section-cream">
+      <div class="container center-head">
+        <p class="eyebrow">07 / Small but real</p>
+        <h2 class="display-1">One more pass.</h2>
+        <p class="lead">Four items. Small on their own, cumulative in effect.</p>
+      </div>
+      <div class="audit-list">
+        <article class="audit-item">
+          <p class="audit-num">01</p>
+          <div class="audit-body">
+            <h3>Wix placeholder ETag tag shipped to production.</h3>
+            <p>The HTML head contains <code>&lt;meta http-equiv="etag" content="bug"/&gt;</code>: Wix placeholder text left in the head. Cosmetic, but every crawler that inspects the page sees it.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">02</p>
+          <div class="audit-body">
+            <h3>Only four total publishes.</h3>
+            <p>The <code>X-Wix-Published-Version</code> header confirms the site has only been published four times ever. Not a defect on its own, but it means very little iteration has happened. The team is early. Small edits ship carefully; big changes probably feel scary.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">03</p>
+          <div class="audit-body">
+            <h3>No custom 404 page.</h3>
+            <p>Hitting any dead URL shows the default Wix "page not found" screen. Custom 404 with a Lulubug character, a "Bug got lost" message, and links back to key pages would be a 30-minute fix that saves every misclicked visitor.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">04</p>
+          <div class="audit-body">
+            <h3>Escaped-apostrophe alt text on the logo.</h3>
+            <p>The site logo's image alt renders as <code>Lulubug&amp;#x27;s-Garden-logo</code> (HTML-entity-encoded apostrophe). Screen readers announce the entity code, not the apostrophe. Wix Editor fix.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CLOSE -->
+    <section class="section section-forest section-final">
+      <div class="container container-narrow center-head">
+        <p class="eyebrow eyebrow-light">Close</p>
+        <h2 class="display-1 display-light">Thirty-five findings. All fixable in the two-week sprint.</h2>
+        <p class="body-lg body-light">Every one of these is fixable inside the Wix editor, in the Wix SEO panel, or by installing a small handful of standard integrations (Klaviyo, Meta Pixel, GA4). No dev work. No rebuild. No platform migration. Full plan on the main page.</p>
+        <div style="margin-top: 48px;">
+          <a href="index.html" class="btn">← Back to the plan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Prepared privately for the Lulubug's Garden team.</p>
+      <p>Full audit companion to <a href="index.html">Lulubug's Garden, dialed in</a>. By Jacob Gilliam. July 2026.</p>
+      <p class="footer-fine">All brand imagery, character names, and trademarks are property of Lulubug Enterprises LLC. Used here for private discussion only. Not for public distribution.</p>
+    </footer>
+
+  </main>
+
+  <script src="main.js?v=1"></script>
+</body>
+</html>
