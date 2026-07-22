@@ -1324,6 +1324,40 @@ button { font-family: inherit; }
   font-weight: 700;
 }
 
+/* Deliverable checklist (What you get section) */
+.deliverable-list {
+  list-style: none;
+  padding: 0;
+  margin: 48px auto 0;
+  max-width: 720px;
+}
+.deliverable-list li {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink);
+  padding: 14px 0 14px 40px;
+  border-top: 1px solid rgba(30, 74, 46, 0.10);
+  position: relative;
+}
+.deliverable-list li:first-child { border-top: none; padding-top: 6px; }
+.deliverable-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 4px;
+  top: 15px;
+  color: var(--green-bright);
+  font-weight: 700;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1;
+}
+.deliverable-list li:first-child::before { top: 7px; }
+@media (max-width: 640px) {
+  .deliverable-list li { font-size: 15px; padding: 12px 0 12px 34px; }
+  .deliverable-list li::before { top: 13px; font-size: 18px; }
+  .deliverable-list li:first-child::before { top: 5px; }
+}
+
 /* Flavor list showcase (Creamalicious) */
 .flavor-showcase {
   max-width: 900px;
