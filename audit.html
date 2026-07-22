@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 <body>
 
@@ -121,8 +121,8 @@
         <article class="audit-item">
           <p class="audit-num">04</p>
           <div class="audit-body">
-            <h3>No TikTok pixel, no Pinterest tag, no YouTube subscribe SDK.</h3>
-            <p>Beyond the Meta gap, none of the other social platform tracking is installed. If Lulubug's Garden ever runs TikTok ads or Pinterest ads or wants a YouTube subscribe embed, all of those will need their own setup. All optional now, all easy to add once the ESP and Meta Pixel are in.</p>
+            <h3>No TikTok pixel or YouTube subscribe SDK.</h3>
+            <p>Lulubug's Garden already posts on TikTok, which means a TikTok Pixel would let you eventually run TikTok Ads with conversion tracking already in place. A YouTube subscribe button SDK on your site would let a parent subscribe to the channel without leaving your page. Both optional now, both easy to add once the ESP and Meta Pixel are in.</p>
           </div>
         </article>
         <article class="audit-item">
@@ -206,8 +206,8 @@
         <article class="audit-item">
           <p class="audit-num">02</p>
           <div class="audit-body">
-            <h3>twitter:card set to summary_large_image with no image.</h3>
-            <p>A card promise with no payload. The tag tells X/Twitter to expect a large preview image; the tag doesn't provide one. Renders as a broken preview.</p>
+            <h3>twitter:card meta tag makes a promise the page doesn't keep.</h3>
+            <p>Twitter Cards are the visual previews that show up when someone shares a Lulubug's Garden link on Twitter or X. Your site has <code>twitter:card="summary_large_image"</code> set, which tells X to expect a large image preview, but no image is actually provided (<code>twitter:image</code> is missing). Result: broken preview on X. Kids brands don't live on X, but educators and journalists sharing about the show will hit this. Five-minute cleanup: either add the image or remove the tag entirely.</p>
           </div>
         </article>
         <article class="audit-item">
@@ -237,44 +237,44 @@
     <!-- 5. CAPTURE CONSISTENCY -->
     <section class="section section-cream">
       <div class="container center-head">
-        <p class="eyebrow">05 / Signup labels and capture</p>
-        <h2 class="display-1">Five names for the same signup.</h2>
-        <p class="lead">Five items. Same button labeled five different ways across the site.</p>
+        <p class="eyebrow">05 / Signup labels and misdirected buttons</p>
+        <h2 class="display-1">Signup flow is scattered. One button lies.</h2>
+        <p class="lead">Five items. Different labels for the same action across pages, plus one misleading button.</p>
       </div>
       <div class="audit-list">
         <article class="audit-item">
           <p class="audit-num">01</p>
           <div class="audit-body">
-            <h3>"Subscribe Now!" (Home hero).</h3>
-            <p>The homepage "Join the Garden!" section calls the signup "Subscribe Now!" Clear enough but inconsistent with every other version of the same action.</p>
+            <h3>Homepage "Subscribe Now!" button actually links to YouTube.</h3>
+            <p>In the "Join the Garden!" section on the homepage, the "Subscribe Now!" button looks visually like an email newsletter signup, but the href points to your YouTube channel. Any parent clicking that button expecting to enter their email gets pulled off your site to YouTube instead. Same misdirection on the hero "Watch Now!" button, which at least makes sense in context, but the near-footer "Subscribe Now!" is confusing because the section around it talks about updates and news. Fix: either change the button to actually open the signup form, or change the button label to "Watch on YouTube" so the CTA matches the destination.</p>
           </div>
         </article>
         <article class="audit-item">
           <p class="audit-num">02</p>
           <div class="audit-body">
-            <h3>"Join the Club!" (Meet the Garden Friends).</h3>
-            <p>The character page calls the same signup "Join the Club!" and pitches it as access to Lulubug's Feelings Flower community. Different label, different framing, same underlying form.</p>
+            <h3>"Join the Club!" (Meet Garden Friends page).</h3>
+            <p>The character page calls the signup "Join the Club!" and pitches it as access to Lulubug's Feelings Flower community. Different label from every other signup entry point, framed differently, but underneath it's the same Wix form.</p>
           </div>
         </article>
         <article class="audit-item">
           <p class="audit-num">03</p>
           <div class="audit-body">
-            <h3>"Join Now!" (Join Now page CTA).</h3>
-            <p>The dedicated Join page calls the same signup "Join Now!" as the CTA text on the button. Third label.</p>
+            <h3>"Join Now!" (Join Now page CTA button).</h3>
+            <p>The dedicated Join page calls the same signup "Join Now!" as the CTA text on the submit button. Third label for the same action.</p>
           </div>
         </article>
         <article class="audit-item">
           <p class="audit-num">04</p>
           <div class="audit-body">
-            <h3>"Subscribe for updates and to join the adventure!" (Join page body).</h3>
-            <p>Right above the same signup form on the Join page. Fourth label, fourth framing, same form.</p>
+            <h3>"Subscribe for updates and to join the adventure!" (Join page body copy).</h3>
+            <p>Right above the same signup form on the Join page, the body copy adds a fourth framing. Same form, fourth version of what it's for.</p>
           </div>
         </article>
         <article class="audit-item">
           <p class="audit-num">05</p>
           <div class="audit-body">
-            <h3>"bug-mail" (marketing copy + Contact form).</h3>
-            <p>The brand's own name for the newsletter is "bug-mail" (the best one). But the Contact form is ALSO called "bug-mail," which will confuse parents about whether they're subscribing or asking a question. Pick one label, unify sitewide.</p>
+            <h3>"bug-mail" (brand term + Contact form).</h3>
+            <p>The brand's own name for the newsletter is "bug-mail" (the best one). But the Contact form is ALSO called "bug-mail," which confuses parents about whether they're subscribing or asking a question. Pick one label ("bug-mail" for the newsletter, "Contact Us" for the form), unify sitewide.</p>
           </div>
         </article>
       </div>
@@ -379,6 +379,6 @@
 
   </main>
 
-  <script src="main.js?v=1"></script>
+  <script src="main.js?v=2"></script>
 </body>
 </html>

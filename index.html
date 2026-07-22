@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 <body>
 
@@ -88,7 +88,7 @@
         <p class="eyebrow eyebrow-light">The read</p>
         <h2 class="display-1 display-light">The show is real. The team is real. The launch spend is landing on a site that isn't ready to keep any of it.</h2>
         <p class="body-lg body-light">A former Disney studio executive is directing this show. A board-certified child psychiatrist from the Huntsman Mental Health Institute is on the team. Jil built the whole thing after her own mental health journey. The characters are physically produced with real photography. The Feelings Flower is a genuine social-emotional learning tool. Every credential and every asset behind this brand is real, and the launch that started in April is exactly the moment that decides how big the audience gets.</p>
-        <p class="body-lg body-light">Right now Meta ads are running to the YouTube channel. Every ad dollar you spend is buying a viewer on a platform Google owns. Meanwhile the "Subscribe Now" and "Join the Club" forms on your website capture emails but never send any back. Which means every parent you convince to type in an email address is landing in a database nobody's reading.</p>
+        <p class="body-lg body-light">Right now Meta ads are running to the YouTube channel. Every ad dollar you spend is buying a viewer on a platform Google owns. Meanwhile the "Join the Club" and "Join Now" forms on your website capture emails but never send any back, and the "Subscribe Now" button that visually reads as an email signup actually links off to YouTube. Which means every parent who tries to sign up either lands in a silent database or gets pulled off your site entirely.</p>
         <p class="body-lg body-light">The next few months decide whether Lulubug's Garden builds an audience the team owns, or an audience that lives on other people's platforms. The two weeks below build the base so every ad dollar from here on out actually earns compounding return.</p>
       </div>
     </section>
@@ -113,8 +113,8 @@
         <article class="audit-item">
           <p class="audit-num">02</p>
           <div class="audit-body">
-            <h3>The signup forms capture emails but don't send anything back.</h3>
-            <p>"Subscribe Now!" on the homepage, "Join the Club!" on the character page, "Join Now!" on the Join page, and the "bug-mail" contact form all collect names and emails. None of them are wired to Klaviyo, Mailchimp, or any real email tool. Wix's default form just emails the submissions to whoever set it up, which means every parent you sign up drops into someone's inbox and gets nothing back. The site literally promises "Subscribe now to get special bug-mail and get access to weekly new episodes." A promise every signup breaks by silence.</p>
+            <h3>The signup form captures emails but doesn't send anything back.</h3>
+            <p>The "Join the Club!" button on the Meet Garden Friends page and the "Join Now!" button on your Join page both point at the same Wix form. It's a native Wix form. No Klaviyo, Mailchimp, or any real email tool connected. Every parent who submits an email lands in Wix's default form pipeline, which just emails the submission to whoever set the site up. Nothing goes back to the parent. Meanwhile the "Subscribe Now!" button in the Join the Garden section on the homepage looks like an email signup but actually links to YouTube. A parent clicking that button expecting to subscribe by email gets sent off-site instead. Every signup path is either silent or misdirected.</p>
           </div>
         </article>
 
@@ -200,7 +200,7 @@
           <div class="plan-details">
             <details class="plan-detail">
               <summary>Klaviyo installed and connected to your Wix forms</summary>
-              <p class="plan-detail-body">Klaviyo is the email tool small kids brands use to grow. I install it, connect it to every signup form on your site (Subscribe Now, Join the Club, Join Now, bug-mail contact), and authenticate the sending domain so emails come from a real Lulubug's Garden address and don't land in spam. Signups start feeding into Klaviyo automatically the moment this ships.</p>
+              <p class="plan-detail-body">Klaviyo is the email tool small kids brands use to grow. I install it, connect it to every real signup form on your site (Join the Club on the Meet Garden Friends page, Join Now on the Join page), and authenticate the sending domain so emails come from a real Lulubug's Garden address and don't land in spam. Signups start feeding into Klaviyo automatically the moment this ships.</p>
             </details>
             <details class="plan-detail">
               <summary>Meta Pixel and Purchase event installed</summary>
@@ -238,7 +238,7 @@
           <div class="plan-details">
             <details class="plan-detail">
               <summary>Signup labels consolidated across the whole site</summary>
-              <p class="plan-detail-body">Right now the same email signup shows up as "Subscribe Now!", "Join the Club!", "Join Now!", "Subscribe for updates and to join the adventure!", and "bug-mail". Five different names for the same action. I pick the strongest one ("bug-mail" is the on-brand pick) and unify every CTA across the site. Same signup, one voice.</p>
+              <p class="plan-detail-body">Right now your signup entry points are labeled inconsistently: "Join the Club!" on the character page, "Join Now!" on the Join page, "Subscribe for updates and to join the adventure!" as body copy above the form. On top of that, the homepage "Subscribe Now!" button visually reads as an email signup but actually links to YouTube (misleading). I pick one consistent label for email signup ("bug-mail" is the on-brand pick) and unify every CTA. I also fix the homepage button to either open the real signup form or relabel to "Watch on YouTube" so the CTA matches what actually happens.</p>
             </details>
             <details class="plan-detail">
               <summary>Five character detail pages built</summary>
@@ -393,6 +393,6 @@
 
   </main>
 
-  <script src="main.js?v=1"></script>
+  <script src="main.js?v=2"></script>
 </body>
 </html>
