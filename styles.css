@@ -608,11 +608,12 @@ button { font-family: inherit; }
   font-weight: 600;
 }
 .ask-offer {
-  margin: 40px 0 32px;
-  padding: 32px;
-  background: rgba(21, 105, 60, 0.08);
-  border-left: 4px solid var(--green);
-  border-radius: 6px;
+  margin: 24px auto;
+  padding: 30px 32px;
+  background: var(--cream-2);
+  border: 1px solid rgba(30, 74, 46, 0.14);
+  border-radius: var(--radius-md);
+  max-width: 560px;
 }
 .ask-offer-eyebrow {
   font-size: 11px;
@@ -2685,14 +2686,16 @@ button { font-family: inherit; }
 
 /* Outcome clusters */
 .cluster-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 22px;
   max-width: 1060px;
   margin: 48px auto 0;
   padding: 0 24px;
 }
 .cluster {
+  flex: 0 1 320px;
   background: var(--cream-2);
   border: 1px solid rgba(30, 74, 46, 0.12);
   border-radius: var(--radius-md);
@@ -2733,12 +2736,15 @@ button { font-family: inherit; }
   display: flex;
   gap: 28px;
   align-items: flex-start;
-  margin: 40px 0;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 640px;
 }
-.ask-proof-row .ask-proof { margin: 0; flex: 1; max-width: 300px; }
+.ask-proof-row .ask-proof { margin: 0; flex: 1 1 0; max-width: 300px; }
+.ask-proof-row .ask-proof img { aspect-ratio: 4 / 5; object-fit: cover; }
 @media (max-width: 640px) {
-  .ask-proof-row { flex-direction: column; }
-  .ask-proof-row .ask-proof { max-width: 340px; }
+  .ask-proof-row { flex-direction: column; align-items: center; }
+  .ask-proof-row .ask-proof { max-width: 320px; width: 100%; }
 }
 
 /* Ask closing line */
