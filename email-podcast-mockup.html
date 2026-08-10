@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lulubug podcast email mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f9f5ea; --mint:#eaf1de; --forest:#1e4a2e; --red:#e63946;
+    --yellow:#f9c332; --grass:#8cc63f; --ink:#1a2e1e; --muted:#5c6b58;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--mint);
+    font-family:'Inter',-apple-system,sans-serif;
+    padding:40px 16px;
+    display:flex;justify-content:center;
+  }
+  .email{
+    width:600px;max-width:100%;
+    background:var(--cream);
+    border-radius:18px;overflow:hidden;
+    box-shadow:0 30px 70px rgba(21,60,36,.18);
+  }
+  .topbar{height:8px;background:linear-gradient(90deg,var(--grass) 0 25%,var(--yellow) 25% 50%,var(--red) 50% 75%,var(--forest) 75% 100%);}
+  .head{text-align:center;padding:30px 40px 6px;}
+  .logo{height:64px;width:auto;}
+  .eyebrow{
+    margin-top:18px;font-size:12px;font-weight:700;letter-spacing:2.5px;
+    text-transform:uppercase;color:var(--grass);
+  }
+  .title{
+    font-family:'Fraunces',Georgia,serif;font-weight:700;
+    font-size:30px;line-height:1.15;color:var(--forest);
+    padding:14px 40px 0;text-align:center;
+  }
+  .thumb-wrap{display:block;position:relative;margin:24px 40px 0;border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(21,60,36,.16);}
+  .thumb-wrap img{display:block;width:100%;height:auto;}
+  .play{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:76px;height:76px;border-radius:50%;
+    background:var(--red);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 24px rgba(0,0,0,.35);
+  }
+  .play::after{content:"";border-style:solid;border-width:15px 0 15px 26px;border-color:transparent transparent transparent #fff;margin-left:6px;}
+  .dur{
+    position:absolute;right:12px;bottom:12px;
+    background:rgba(30,74,46,.9);color:#fff;font-size:12px;font-weight:600;
+    padding:4px 10px;border-radius:99px;
+  }
+  .body{padding:26px 40px 4px;text-align:center;}
+  .body p{font-size:16px;line-height:1.6;color:var(--ink);margin-bottom:14px;}
+  .body .lede{font-weight:600;}
+  .cta{display:block;width:fit-content;margin:22px auto 8px;padding:16px 40px;background:var(--red);color:#fff;font-size:15px;font-weight:700;text-decoration:none;border-radius:99px;}
+  .or{display:flex;align-items:center;gap:14px;color:var(--muted);font-size:13px;margin:26px 40px 0;}
+  .or::before,.or::after{content:"";flex:1;height:1px;background:rgba(30,74,46,.15);}
+  .recap{background:var(--mint);margin:22px 40px 0;padding:24px;border-radius:14px;text-align:center;}
+  .recap h3{font-family:'Fraunces',serif;font-size:19px;color:var(--forest);margin-bottom:6px;}
+  .recap p{font-size:14px;color:var(--muted);margin-bottom:16px;}
+  .cta-2{display:inline-block;padding:13px 30px;background:transparent;color:var(--forest);font-size:14px;font-weight:700;text-decoration:none;border-radius:99px;border:2px solid var(--grass);}
+  .sign{text-align:center;padding:30px 40px 6px;}
+  .sign p{font-size:16px;color:var(--ink);}
+  .sign .names{font-family:'Fraunces',serif;font-style:italic;font-size:20px;color:var(--forest);margin-top:2px;}
+  .footer{text-align:center;padding:24px 40px 34px;}
+  .footer p{font-size:12px;color:var(--muted);line-height:1.6;}
+  .footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+  <div class="email">
+    <div class="topbar"></div>
+    <div class="head">
+      <img class="logo" src="images/lulubug-logo.png" alt="Lulubug's Garden">
+      <p class="eyebrow">New episode · Podcast for Parents</p>
+    </div>
+    <h1 class="title">"This Is Too Hard!" How to Build Persistence Through Frustration</h1>
+
+    <a class="thumb-wrap" href="https://www.youtube.com/watch?v=og6CwyY_T6w">
+      <img src="images/pod-persistence-max.jpg" alt="Jil and Dr. Karen on the Lulubug's Podcast for Parents set">
+      <span class="play"></span>
+      <span class="dur">30 min</span>
+    </a>
+
+    <div class="body">
+      <p class="lede">Every parent knows the moment.</p>
+      <p>The tower of blocks finally topples, and the meltdown is instant. In this episode, Jil and Dr. Karen unpack why that frustration isn't a lack of resilience, and the small moves that help a child push through instead of giving up.</p>
+      <a class="cta" href="https://www.youtube.com/watch?v=og6CwyY_T6w">Watch the episode</a>
+    </div>
+
+    <div class="or">or</div>
+
+    <div class="recap">
+      <h3>Short on time?</h3>
+      <p>We pulled the three biggest takeaways into a two-minute read.</p>
+      <a class="cta-2" href="https://www.lulubugsgarden.com">Read the recap</a>
+    </div>
+
+    <div class="sign">
+      <p>See you in the Garden,</p>
+      <p class="names">Jil &amp; Dr. Karen</p>
+    </div>
+
+    <div class="footer">
+      <p>You're getting this because you joined bug-mail at lulubugsgarden.com.<br><a href="#">Unsubscribe</a> anytime.</p>
+    </div>
+  </div>
+</body>
+</html>

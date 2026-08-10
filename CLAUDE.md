@@ -22,11 +22,24 @@ Static site, no build step. Preview:
 `python3 -m http.server 4321`, then open http://localhost:4321
 
 ## Files
-- `index.html` — all pitch content, one page
-- `audit.html` — full audit findings (35 items across 7 categories)
+- `index.html` — all pitch content, one page (v=7 rebuild: warmth-first arc)
+- `audit.html` — full audit findings (33 items across 7 categories: 5+5+6+5+5+4+3)
 - `styles.css` — all styling (cream + pale mint + forest green + bright red palette, Fraunces display + Inter body)
 - `main.js` — passwordless intro splash + scroll-reveal
-- `images/` — supporting imagery
+- `images/` — logo, aurean-rings.jpg, og-card.jpg (self-demo link preview). `images/jacob.jpg` slot exists in The Ask; figure auto-hides until Jacob drops a photo in.
+- `pre-send-check.sh` — one-command re-verification of every live-site claim. RUN THIS THE DAY THE LINK GOES OUT.
+
+## v=7 structure (index.html)
+Splash → Hero (praise-first) → TL;DR (price-free) → What You've Built (#built) → Early Advantage (forest band) → What I Noticed (4 findings + bridge visual + preview pair + live test + email mockup) → Platform reassurance (short band) → What Connected Looks Like (5 outcome clusters) → The Plan (#plan, "two weeks of groundwork", 11+13 accordions) → How We'd Work (#how, merged 3-col) → The Ask (#ask, ONE offer + kill switch + later-door) → Footer
+
+## Locked editorial decisions (do not regress)
+- NO deliverable count anywhere on index (kills count-consistency bugs). Audit keeps "Thirty-three findings."
+- Price appears exactly twice: plan intro + Ask offer block. Never in TL;DR or hero.
+- "groundwork" lowercase as the container word. Never capital-G branded.
+- All Meta ad claims past/conditional: they are NOT currently running ads.
+- Truncated-bios and four-publishes findings are DEAD (they fixed the bios; publish count unverifiable). Never re-add.
+- Podcast facts: 8 episodes, 16 to 38 min, 20 subs vs 1,380 on main channel, 91 videos since April 30.
+- CSS gotcha: `.audit-body p` outranks single-class selectors; new text components inside audit items need `.parent p.class` specificity.
 
 ## Palette (all locked to Lulubug's actual brand)
 - `#f9f5ea` — warm cream (main background)
