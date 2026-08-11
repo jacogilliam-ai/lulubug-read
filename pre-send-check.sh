@@ -48,7 +48,7 @@ curl -sL "https://youtube.com/@lulubugsgarden" -o "$MAIN"
 curl -sL "https://youtube.com/@lulubugspodcastforparents/videos" -o "$POD"
 echo "  main channel: $(grep -oE '[0-9.]+[KM]? subscribers' "$MAIN" | sort -u | head -1), $(grep -oE '[0-9]+ videos' "$MAIN" | sort -u | tail -1)"
 echo "  podcast:      $(grep -oE '[0-9.]+[KM]? subscribers' "$POD" | sort -u | head -1)"
-echo "  pitch claims: 1,380 subs / 91 videos / 20 podcast subs. Update index.html + audit.html if drifted."
+echo "  pitch claims: 1,380 subs / 95 videos / 20 podcast subs. Update index.html + audit.html if drifted."
 rm -f "$MAIN" "$POD"
 
 echo ""
