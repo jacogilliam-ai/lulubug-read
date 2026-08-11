@@ -2785,3 +2785,10 @@ button { font-family: inherit; }
   color: var(--ink-muted);
   margin: -6px 0 18px;
 }
+
+
+/* Bridge + podcast email span the full finding width so they center on the page, not the offset text column */
+.audit-item > .bridge,
+.audit-item > .podcast-email-fig {
+  grid-column: 1 / -1;
+}
