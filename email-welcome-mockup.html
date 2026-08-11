@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f9f5ea; --mint:#eaf1de; --forest:#1e4a2e; --red:#e63946;
+    --yellow:#f9c332; --grass:#8cc63f; --ink:#1a2e1e; --muted:#5c6b58; --sky:#7db7c9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--mint);font-family:'Inter',sans-serif;padding:40px 16px;display:flex;justify-content:center;}
+  .email{width:600px;max-width:100%;background:var(--cream);border-radius:18px;overflow:hidden;box-shadow:0 30px 70px rgba(30,74,46,.18);}
+  .topbar{height:8px;background:linear-gradient(90deg,var(--grass) 0 25%,var(--yellow) 25% 50%,var(--red) 50% 75%,var(--forest) 75% 100%);}
+  .head{text-align:center;padding:32px 40px 0;}
+  .logo{height:66px;width:auto;}
+  .eyebrow{margin-top:20px;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--grass);}
+  .title{font-family:'Fraunces',serif;font-weight:700;font-size:36px;line-height:1.1;color:var(--forest);padding:12px 40px 0;text-align:center;}
+  .body{padding:20px 44px 0;text-align:center;}
+  .body p{font-size:16px;line-height:1.6;color:var(--ink);margin-bottom:14px;}
+  .body .sign{font-family:'Fraunces',serif;font-style:italic;font-size:19px;color:var(--forest);}
+
+  /* Feelings Flower download card */
+  .flower-card{margin:26px 40px 0;background:#fff;border:2px dashed var(--grass);border-radius:16px;padding:28px 24px;text-align:center;}
+  .flower{position:relative;width:120px;height:120px;margin:0 auto 6px;}
+  .petal{position:absolute;top:50%;left:50%;width:38px;height:52px;border-radius:60% 60% 50% 50%;transform-origin:50% 100%;}
+  .p1{background:var(--red);transform:translate(-50%,-100%) rotate(0deg);}
+  .p2{background:var(--yellow);transform:translate(-50%,-100%) rotate(60deg);}
+  .p3{background:var(--grass);transform:translate(-50%,-100%) rotate(120deg);}
+  .p4{background:var(--forest);transform:translate(-50%,-100%) rotate(180deg);}
+  .p5{background:var(--sky);transform:translate(-50%,-100%) rotate(240deg);}
+  .p6{background:#e88ab0;transform:translate(-50%,-100%) rotate(300deg);}
+  .core{position:absolute;top:50%;left:50%;width:34px;height:34px;border-radius:50%;background:var(--yellow);border:3px solid #fff;transform:translate(-50%,-50%);z-index:2;}
+  .flower-k{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);}
+  .flower-t{font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:var(--forest);margin:4px 0 4px;}
+  .flower-d{font-size:14px;color:var(--muted);margin-bottom:16px;}
+  .btn{display:inline-block;padding:14px 30px;background:var(--red);color:#fff;font-size:14px;font-weight:700;text-decoration:none;border-radius:99px;}
+
+  /* Meet the friends */
+  .friends{margin:24px 40px 0;text-align:center;}
+  .friends-h{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+  .chip{font-size:13px;font-weight:600;padding:7px 14px;border-radius:99px;color:#fff;}
+  .c1{background:var(--red);} .c2{background:var(--grass);} .c3{background:var(--forest);} .c4{background:var(--sky);} .c5{background:#e88ab0;}
+
+  .footer{text-align:center;padding:30px 40px 34px;margin-top:20px;}
+  .footer p{font-size:12px;color:var(--muted);line-height:1.6;}
+  .footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+  <div class="email">
+    <div class="topbar"></div>
+    <div class="head">
+      <img class="logo" src="images/lulubug-logo.png" alt="Lulubug's Garden">
+      <p class="eyebrow">Welcome to bug-mail</p>
+    </div>
+    <h1 class="title">Welcome to the Garden!</h1>
+    <div class="body">
+      <p>Hi, I'm Jil. I made this show so kids could name what they feel, out loud, without it being scary. You're exactly who it's for, and I'm so glad you're here.</p>
+      <p class="sign">Let's grow something good together.</p>
+    </div>
+
+    <div class="flower-card">
+      <div class="flower">
+        <span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span>
+        <span class="petal p4"></span><span class="petal p5"></span><span class="petal p6"></span>
+        <span class="core"></span>
+      </div>
+      <p class="flower-k">Your welcome gift</p>
+      <p class="flower-t">The Feelings Flower coloring page</p>
+      <p class="flower-d">Print it, color it together, and let each petal hold a feeling.</p>
+      <a class="btn" href="#">Print your Feelings Flower</a>
+    </div>
+
+    <div class="friends">
+      <p class="friends-h">Meet the Garden Friends</p>
+      <div class="chips">
+        <span class="chip c1">Lulubug</span><span class="chip c2">Curby</span>
+        <span class="chip c3">Sterling</span><span class="chip c4">Willow</span>
+        <span class="chip c5">Daisy</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>New episodes drop weekly. We'll send you the good ones.<br>
+      You're getting this because you joined bug-mail at lulubugsgarden.com.<br><a href="#">Unsubscribe</a> anytime.</p>
+    </div>
+  </div>
+</body>
+</html>
