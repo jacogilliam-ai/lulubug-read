@@ -1893,9 +1893,9 @@ button { font-family: inherit; }
    ========================================================= */
 .plan-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
-  max-width: 1200px;
+  max-width: 920px;
   margin: 56px auto 0;
 }
 .plan-month {
