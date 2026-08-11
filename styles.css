@@ -2792,3 +2792,11 @@ button { font-family: inherit; }
 .audit-item > .podcast-email-fig {
   grid-column: 1 / -1;
 }
+
+/* Outcome sentence inside cluster cards (replaces duplicate deliverable lists) */
+.cluster-line {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0;
+}
