@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=15" />
 </head>
 <body>
 
@@ -33,7 +33,7 @@
         <p class="eyebrow eyebrow-light">Full audit</p>
         <h1 class="display-1 display-light">What jumped out across every page.</h1>
         <p class="body-lg body-light">Thirty-three findings across seven categories. Ranked by impact. Re-checked against the live site in August 2026.</p>
-        <p class="body-lg body-light" style="margin-top: 20px; font-size: 0.95em; color: rgba(250,248,228,0.85);">Everything below is fixable in two weeks. None of it touches what's working: the show, the pace, the team. This list exists so nothing leaks while that compounds.</p>
+        <p class="body-lg body-light" style="margin-top: 20px; font-size: 0.95em; color: rgba(250,248,228,0.85);">Everything below is fixable inside the setup you already have. None of it touches what's working: the show, the pace, the team. This list exists so nothing leaks while that compounds.</p>
       </div>
     </section>
 
@@ -49,7 +49,7 @@
           <p class="audit-num">01</p>
           <div class="audit-body">
             <h3>Terms, Privacy, and Cookies footer links all lead to error pages.</h3>
-            <p>Every page footer displays "Terms and Conditions | Privacy Policy | Cookies Policy" as clickable text, but the link points to your Contact page, and the direct addresses (<code>/privacy-policy</code>, <code>/terms-and-conditions</code>, <code>/cookie-policy</code>) show "page not found." For a site that captures personal information (names and emails) and has run Meta ads, that's compliance exposure under California's privacy laws (CCPA and CPRA), and a Meta ad policy risk the moment campaigns resume. Same-day fix.</p>
+            <p>Every page footer displays "Terms and Conditions | Privacy Policy | Cookies Policy" as clickable text, but the link points to your Contact page, and the direct addresses (<code>/privacy-policy</code>, <code>/terms-and-conditions</code>, <code>/cookie-policy</code>) show "page not found." For a site that collects names and emails and has run Meta ads, that's a real gap: a privacy policy is table stakes for email collection, and Meta expects advertisers to have a working one the moment campaigns resume. Same-day fix.</p>
           </div>
         </article>
         <article class="audit-item">
@@ -115,7 +115,7 @@
         <article class="audit-item">
           <p class="audit-num">04</p>
           <div class="audit-body">
-            <h3>No TikTok pixel or YouTube subscribe SDK.</h3>
+            <h3>No TikTok pixel or YouTube subscribe button.</h3>
             <p>Lulubug's Garden already posts on TikTok, which means a TikTok Pixel would let you eventually run TikTok ads with conversion tracking already in place. A YouTube subscribe button on your site would let a parent subscribe to the channel without leaving your page. Both optional now, both easy to add once the email tool and Meta Pixel are in.</p>
           </div>
         </article>
@@ -155,7 +155,7 @@
           <p class="audit-num">03</p>
           <div class="audit-body">
             <h3>No proper videos hub.</h3>
-            <p>The URL <code>/videos</code> is actually the character intro page, not a videos gallery. The nav labels it "Meet Garden Friends" while the URL slug is <code>/videos</code>. Users and Google both get confused.</p>
+            <p>The address <code>/videos</code> is actually the character intro page, not a videos gallery. The nav labels it "Meet Garden Friends" while the web address says <code>/videos</code>. Visitors and Google both get confused.</p>
           </div>
         </article>
         <article class="audit-item">
@@ -292,8 +292,8 @@
         <article class="audit-item">
           <p class="audit-num">02</p>
           <div class="audit-body">
-            <h3>Wix accessibility skip-nav strings render as visible text.</h3>
-            <p>"top of page" and "bottom of page" appear as visible page copy on multiple pages. These are Wix's built-in skip-nav a11y helpers, and they should never be visible. Wix Editor setting fix.</p>
+            <h3>Hidden accessibility text is showing on the page.</h3>
+            <p>"top of page" and "bottom of page" appear as visible page copy on multiple pages. These are Wix's built-in accessibility helpers, meant for screen readers only, and they should never be visible. Wix Editor setting fix.</p>
           </div>
         </article>
         <article class="audit-item">
@@ -324,8 +324,8 @@
         <article class="audit-item">
           <p class="audit-num">01</p>
           <div class="audit-body">
-            <h3>Wix placeholder ETag tag shipped to production.</h3>
-            <p>The HTML head contains <code>&lt;meta http-equiv="etag" content="bug"/&gt;</code>: Wix placeholder text left in the head. Cosmetic, but every crawler that inspects the page sees it.</p>
+            <h3>Wix placeholder text left in the page code.</h3>
+            <p>The page code contains <code>&lt;meta http-equiv="etag" content="bug"/&gt;</code>, a piece of Wix placeholder text that was never cleaned up. Cosmetic, but every crawler that inspects the page sees it.</p>
           </div>
         </article>
         <article class="audit-item">
@@ -338,8 +338,8 @@
         <article class="audit-item">
           <p class="audit-num">03</p>
           <div class="audit-body">
-            <h3>Escaped-apostrophe alt text on the logo.</h3>
-            <p>The site logo's image alt renders as <code>Lulubug&amp;#x27;s-Garden-logo</code> (HTML-entity-encoded apostrophe). Screen readers announce the entity code, not the apostrophe. Wix Editor fix.</p>
+            <h3>The logo's image description shows code instead of an apostrophe.</h3>
+            <p>The site logo's image description reads <code>Lulubug&amp;#x27;s-Garden-logo</code>, with code where the apostrophe should be. Screen readers read that code out loud to visually impaired visitors. Wix Editor fix.</p>
           </div>
         </article>
       </div>
@@ -349,7 +349,7 @@
     <section class="section section-forest section-final">
       <div class="container container-narrow center-head">
         <p class="eyebrow eyebrow-light">Close</p>
-        <h2 class="display-1 display-light">Thirty-three findings. Every one that costs you money fits in the two weeks.</h2>
+        <h2 class="display-1 display-light">Thirty-three findings. The two weeks stop the leaks. The weeks after build the rest.</h2>
         <p class="body-lg body-light">All of it lives inside the Wix editor, the Wix settings panels, or a small handful of standard integrations (Klaviyo, Meta Pixel, Google Analytics). No dev work. No rebuild. No platform migration.</p>
         <div style="margin-top: 48px;">
           <a href="index.html" class="btn">See how I'd approach it</a>
@@ -366,6 +366,6 @@
 
   </main>
 
-  <script src="main.js?v=14"></script>
+  <script src="main.js?v=15"></script>
 </body>
 </html>
